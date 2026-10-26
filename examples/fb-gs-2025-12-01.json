@@ -1,0 +1,158 @@
+{
+  "title": "FB 1-1 GS — Hakimiyet var, isabet yok",
+  "slug": "fb-gs-2025-12-01",
+  "seed": "fbgs-20251201",
+  "match": {
+    "competition": "Trendyol Süper Lig · 14. hafta",
+    "date": "2025-12-01",
+    "venue": "Chobani Stadyumu (Kadıköy)",
+    "score": "Fenerbahçe 1-1 Galatasaray (İY 0-1)",
+    "sources": [
+      "https://espndeportes.espn.com/futbol/partido/_/juegoId/750038/galatasaray-fenerbahce",
+      "https://www.sporx.com/fenerbahce-galatasaray-maci-anlatim-4842433"
+    ],
+    "notes": "xG kaynaklarda yok -> xG kullanılmadı. Şut/isabet/topla oynama/korner/faul ESPN; kadrolar, kartlar ve gol dakikaları Sporx maç anlatımı. Şut yerleri temsili."
+  },
+  "voice": { "engine": "none" },
+  "audio": { "sfx": false },
+  "teams": {
+    "home": { "name": "FENERBAHÇE", "short": "FB", "color": "#FFD21F", "dark": "#0B1F4F", "textDark": true },
+    "away": { "name": "GALATASARAY", "short": "GS", "color": "#E8202E", "dark": "#4A0710" }
+  },
+  "scenes": [
+    {
+      "type": "score-hook", "bg": "dark", "accent": "r",
+      "params": {
+        "score": "1–1",
+        "goals": [
+          { "minute": "27", "team": "away", "label": "27' SANÉ" },
+          { "minute": "90+5", "team": "home", "label": "90+5' DURÁN" }
+        ],
+        "meta": "SÜPER LİG · 14. HAFTA · 1 ARALIK 2025 · KADIKÖY"
+      },
+      "caps": [
+        { "lines": ["DERBİDE SKOR 1–1.", { "text": "AMA OYUN BERABERE DEĞİLDİ.", "color": "r" }],
+          "vo": "Derbide skor bire bir. Ama oyun berabere değildi." }
+      ]
+    },
+    {
+      "type": "shot-map", "bg": "gold", "accent": "y",
+      "params": {
+        "home": { "shots": 17, "on_target": 2, "goals": [{ "minute": "90+5", "player": "Durán" }], "step": 0 },
+        "away": { "shots": 6, "on_target": 2, "goals": [{ "minute": "27", "player": "Sané" }], "step": 1 },
+        "bar": { "home": 56, "away": 44, "leftText": "FB · TOPLA OYNAMA %56", "rightText": "%44 · GS", "step": 2 },
+        "source": "ŞUT YERLERİ TEMSİLİ · VERİ: ESPN"
+      },
+      "caps": [
+        { "lines": ["FENERBAHÇE", { "text": "17 ŞUT ÇEKTİ.", "color": "y" }], "vo": "Fenerbahçe on yedi şut çekti." },
+        { "lines": ["GALATASARAY", { "text": "SADECE 6.", "color": "r" }], "vo": "Galatasaray sadece altı." },
+        { "lines": ["TOP DA YÜZDE 56", { "text": "FENERBAHÇE'DEYDİ.", "color": "y" }], "vo": "Top da yüzde elli altı Fenerbahçe'deydi." }
+      ]
+    },
+    {
+      "type": "stat-duel", "bg": "blue", "accent": "y",
+      "params": {
+        "rows": [
+          { "label": "TOPLA OYNAMA", "home": 56, "away": 44, "prefix": "%" },
+          { "label": "ŞUT", "home": 17, "away": 6 },
+          { "label": "İSABETLİ ŞUT", "home": 2, "away": 2 },
+          { "label": "KORNER", "home": 7, "away": 3 },
+          { "label": "FAUL", "home": 12, "away": 22 }
+        ],
+        "focus": [{ "step": 1, "row": 2 }],
+        "source": "VERİ: ESPN"
+      },
+      "caps": [
+        { "lines": ["KAĞIT ÜSTÜNDE", { "text": "TEK TARAFLI BİR DERBİ.", "color": "y" }], "vo": "Kağıt üstünde tek taraflı bir derbi." },
+        { "lines": ["AMA 17 ŞUTTAN", { "text": "KALEYİ BULAN SADECE 2.", "color": "r" }], "vo": "Ama on yedi şuttan kaleyi bulan sadece iki." }
+      ]
+    },
+    {
+      "type": "stamp", "bg": "maroon", "accent": "r",
+      "params": {
+        "cardTop": 1180,
+        "cards": [
+          { "kicker": "FENERBAHÇE · İSABET ORANI", "big": "%12", "sub": "17 ŞUT · 2 İSABET", "color": "#D3261F" },
+          { "kicker": "GALATASARAY · İSABET ORANI", "big": "%33", "sub": "6 ŞUT · 2 İSABET", "color": "#151515" }
+        ]
+      },
+      "caps": [
+        { "lines": ["FENERBAHÇE'NİN İSABET ORANI", { "text": "YÜZDE 12.", "color": "r" }], "vo": "Fenerbahçe'nin isabet oranı: yüzde on iki." },
+        { "lines": ["GALATASARAY'IN:", { "text": "YÜZDE 33.", "color": "y" }], "vo": "Galatasaray'ın: yüzde otuz üç." }
+      ]
+    },
+    {
+      "type": "timeline", "bg": "dark", "accent": "y",
+      "params": {
+        "events": [
+          { "minute": 27, "type": "goal", "team": "away", "label": "27' SANÉ", "step": 0 },
+          { "minute": 36, "type": "yellow", "team": "home", "step": 1 },
+          { "minute": 40, "type": "yellow", "team": "away", "step": 1 },
+          { "minute": 54, "type": "yellow", "team": "home", "step": 1 },
+          { "minute": 63, "type": "yellow", "team": "away", "step": 1 },
+          { "minute": 66, "type": "yellow", "team": "home", "step": 1 },
+          { "minute": 66, "type": "yellow", "team": "home", "step": 1 },
+          { "minute": 71, "type": "yellow", "team": "away", "step": 1 },
+          { "minute": 78, "type": "yellow", "team": "away", "step": 1 },
+          { "minute": "90+5", "type": "goal", "team": "home", "label": "90+5' DURÁN", "step": 2 }
+        ],
+        "note": "GOLLER ÜSTTE · SARI KARTLAR ALTTA",
+        "source": "VERİ: SPORX MAÇ ANLATIMI · ESPN"
+      },
+      "caps": [
+        { "lines": ["GALATASARAY 27'DE", { "text": "SANÉ İLE ÖNE GEÇTİ.", "color": "r" }], "vo": "Galatasaray yirmi yedinci dakikada Sané ile öne geçti." },
+        { "lines": ["GALATASARAY", { "text": "22 FAUL YAPTI.", "color": "y" }], "vo": "Galatasaray yirmi iki faul yaptı." },
+        { "lines": ["VE 90+5'TE", { "text": "JHON DURÁN.", "color": "y" }], "vo": "Ve doksan artı beşte: Jhon Durán.", "hold": 0.4 }
+      ]
+    },
+    {
+      "type": "lineup", "bg": "blue", "accent": "y",
+      "params": {
+        "team": "home", "formation": "4-1-4-1",
+        "players": ["Ederson", "Brown", "Oosterwolde", "Skriniar", "Semedo", "Álvarez", "Kerem", "İsmail", "Asensio", "Nene", "En-Nesyri"],
+        "focus": [{ "step": 0, "names": ["Asensio"] }],
+        "ghosts": [{ "name": "J. Durán", "label": "YEDEK", "at": [52, 63], "step": 1, "color": "y" }],
+        "footer": "FENERBAHÇE İLK 11 · 4-1-4-1 · YERLER TEMSİLİ"
+      },
+      "caps": [
+        { "lines": ["EN ÇOK ŞUTU", { "text": "ASENSIO ÇEKTİ: 5.", "color": "y" }], "vo": "En çok şutu Asensio çekti: beş." },
+        { "lines": ["GOLÜ ATAN DURÁN İSE", { "text": "İLK 11'DE YOKTU.", "color": "y" }], "vo": "Golü atan Durán ise ilk on birde yoktu." }
+      ]
+    },
+    {
+      "type": "bars", "bg": "dark", "accent": "y",
+      "params": {
+        "items": [
+          { "label": "FB ŞUT", "value": 17, "color": "y" },
+          { "label": "İSABET", "value": 2, "color": "o" },
+          { "label": "GOL", "value": 1, "color": "r" }
+        ],
+        "baseline": 1400,
+        "source": "VERİ: ESPN"
+      },
+      "caps": [
+        { "lines": ["17 ŞUT. 2 İSABET.", { "text": "1 GOL.", "color": "y" }], "vo": "On yedi şut. İki isabet. Bir gol." }
+      ]
+    },
+    {
+      "type": "pitch-dim", "bg": "black", "accent": "y", "capPos": "center", "capAlign": "center",
+      "params": {},
+      "caps": [
+        { "lines": [{ "text": "SORUN ŞUT ATMAK DEĞİL,", "strike": true, "strikeDelay": 0.9 }], "vo": "Sorun şut atmak değil." },
+        { "lines": ["SORUN", { "text": "KALEYİ BULMAK.", "color": "y" }], "vo": "Sorun kaleyi bulmak." }
+      ]
+    },
+    {
+      "type": "cta", "bg": "black", "accent": "y",
+      "params": {
+        "buttonTop": 720,
+        "recap": { "items": [{ "label": "ŞUT", "value": 17, "color": "y" }, { "label": "İSABET", "value": 2, "color": "o" }, { "label": "GOL", "value": 1, "color": "r" }] }
+      },
+      "caps": [
+        { "lines": ["SENCE FENERBAHÇE"], "fontSize": 84, "vo": "Sence Fenerbahçe" },
+        { "lines": ["SENCE FENERBAHÇE", { "text": "2 PUAN MI KAYBETTİ,", "color": "w" }], "fontSize": 84, "append": true, "vo": "iki puan mı kaybetti," },
+        { "lines": ["SENCE FENERBAHÇE", { "text": "2 PUAN MI KAYBETTİ,", "color": "w" }, { "text": "YOKSA 1 PUAN MI KURTARDI?", "color": "y" }], "fontSize": 84, "append": true, "vo": "yoksa bir puan mı kurtardı?", "hold": 1.6 }
+      ]
+    }
+  ]
+}
